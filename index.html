@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello htmx</title>
+  <script src="https://unpkg.com/htmx.org@1.7.0/dist/htmx.js"></script>
+</head>
+<body>
+
+  <h1>Hello htmx!</h1>
+
+  <form hx-post="/hello" hx-target="#output">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name" value="World" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="output" hx-target="#output">
+    <!-- Response will be displayed here -->
+  </div>
+
+</body>
+</html>
+
